@@ -11,7 +11,7 @@ let submit = document.getElementById('submit');
 let mood = 'create';
 let tmp;
 
-// fonction dyl get total
+// functionget total
 function getTotal(){
     if(price.value != ''){
         let result = (+price.value + +taxes.value + +ads.value) - +discount.value;
@@ -22,7 +22,7 @@ function getTotal(){
         total.style.background = '#a00d05';
     }
 }
-// fonction dyl create product
+// function create product
 let dataPro;
 if(localStorage.product != null){
     dataPro = JSON.parse(localStorage.product)
@@ -45,7 +45,7 @@ submit.onclick = function(){
     }
     
     if(mood === 'create'){
-        if(newPro.count > 1){//count : par exemple 2ila dert f count 1000 alors ghadi y creer liya 1000 produits
+        if(newPro.count > 1){//count
 
             for(let i = 0 ; i < newPro.count ; i++){
             dataPro.push(newPro);
@@ -63,13 +63,13 @@ submit.onclick = function(){
 
    
     
-    // save f local storage
+    // save in local storage
     localStorage.setItem('product', JSON.stringify(dataPro))
     clearData()
     showData()
 }
 
-// clear inputs menni chi wahed ybghi ydakhal par exemple chi 7aja f input
+// clear inputs
 function clearData(){
     title.value='';
     price.value='';
@@ -139,7 +139,7 @@ function updateData(i){
     submit.innerHTML = 'Update';
     mood = 'update';
     tmp = i;
-    scroll({ //kan configuriw biha l scroll , par exemple db menni ghayddar l update ghadi ntl3o automatiquement lfo9 dyl la page
+    scroll({
         top:0,
         behavior:'smooth',
     })
@@ -205,4 +205,3 @@ function searchData(value){
         
      document.getElementById('tbody').innerHTML = table;
 }
-//clean data
