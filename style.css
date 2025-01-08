@@ -47,13 +47,13 @@ button{
     height: 30px;
     border: none;
     cursor: pointer;
-    background: #390054;
+    background: #003e54;
     color: #fff;
     border-radius: 20px;
     transition: 0.5s;
 }
 button:hover{
-    background: #51025f;
+    background: #0d268b;
     letter-spacing: 1px;
 }
 .btnSearch{
